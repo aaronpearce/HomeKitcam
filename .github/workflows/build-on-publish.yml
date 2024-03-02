@@ -4,29 +4,15 @@ on:
 	types: [publish-event]
 
 jobs:
-  deploy:
-	runs-on: ubuntu-latest
-	steps:
-  	- uses: actions/checkout@v4
-
-  	- name: Setup Node
-    	uses: actions/setup-node@v4
-    	with:
-      	node-version: '20.x'
-
-  	- name: Cache dependencies
-    	uses: actions/cache@v4
-    	with:
-      	path: ~/.npm
-      	key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-      	restore-keys: |
-        	${{ runner.os }}-node-
-
-  	- run: npm ci
-  	- run: npm run build
-
-  	- name: Deploy
-    	uses: peaceiris/actions-gh-pages@v3
-    	with:
-      	deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-      	publish_dir: _site
+  build_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Build
+        uses: TartanLlama/actions-eleventy@master
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_dir: _site 
+          publish_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
