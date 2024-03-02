@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@main
       - name: Build
-        uses: TartanLlama/actions-eleventy@master
+        uses: welch-lab/actions-eleventy@master
         with:
           install_dependencies: true
       - name: Deploy
