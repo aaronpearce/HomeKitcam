@@ -6,8 +6,8 @@ on:
 
 jobs:
   deploy:
-	  runs-on: ubuntu-18.04
-	  steps:
+    runs-on: ubuntu-18.04
+    steps:
     - uses: actions/checkout@v2
 
     - name: Setup Node
