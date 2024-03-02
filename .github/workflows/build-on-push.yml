@@ -10,9 +10,13 @@ jobs:
         uses: welch-lab/actions-eleventy@master
         with:
           install_dependencies: true
+        env:
+          CTF_SPACE_ID: ${{ secrets.CTF_SPACE_ID }}
+          CTF_CDA_ACCESS_TOKEN: ${{ secrets.CTF_CDA_ACCESS_TOKEN }}
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           publish_dir: _site 
           publish_branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}
+            
