@@ -1,0 +1,13 @@
+---
+layout: layout.html
+---
+<main>
+	<h1>A brave new world, indeed.</h1>
+	{% for camera in cameras %}
+		<article>
+			<h1>{{ camera.fields.name }}</h1>
+			<time>{{ camera.sys.createdAt }}</time>
+			<div>{{ camera.fields.productDescription | renderRichTextAsHtml | safe }}</div>
+		</article>
+	{% endfor %}
+</main>
