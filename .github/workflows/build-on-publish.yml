@@ -10,6 +10,11 @@ jobs:
       - uses: actions/checkout@master
       - name: Build
         uses: welch-lab/actions-eleventy@master
+      - name: Generate Tailwind CSS
+        uses: ZoeyVid/tailwindcss-update@v1.4.0
+        with:
+          input: src/style/base.css
+          output: _site/output.css
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
