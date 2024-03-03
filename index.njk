@@ -9,7 +9,7 @@ title: HomeKit.cam - Every HomeKit camera and more
 			<h1>{{ camera.fields.name }}</h1>
 			<time>{{ camera.sys.createdAt }}</time>
 			<div>{{ camera.fields.productDescription | renderRichTextAsHtml | safe }}</div>
-		</article>
+			<img src="{{ camera.fields.image.url }}" />
 		
 	{% endfor %}
 </main>
