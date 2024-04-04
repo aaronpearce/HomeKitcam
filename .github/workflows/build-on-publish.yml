@@ -10,6 +10,8 @@ jobs:
       - uses: actions/checkout@master
       - name: Build
         uses: welch-lab/actions-eleventy@master
+        with:
+          install_dependencies: true
       - name: Generate Tailwind CSS
         uses: ZoeyVid/tailwindcss-update@v1.4.0
         with:
