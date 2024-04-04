@@ -12,6 +12,9 @@ jobs:
         uses: welch-lab/actions-eleventy@master
         with:
           install_dependencies: true
+        env:
+          CTF_SPACE_ID: ${{ secrets.CTF_SPACE_ID }}
+          CTF_CDA_ACCESS_TOKEN: ${{ secrets.CTF_CDA_ACCESS_TOKEN }}
       - name: Generate Tailwind CSS
         uses: ZoeyVid/tailwindcss-update@v1.4.0
         with:
