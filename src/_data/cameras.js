@@ -1,4 +1,3 @@
-import arrayShuffle from 'array-shuffle';
 const client = require('../utils').contentfulClient;
 
 module.exports = async () => {
