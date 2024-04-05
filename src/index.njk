@@ -42,7 +42,7 @@ title: HomeKit.cam - Every HomeKit camera and more
 				{% if camera.fields.requiresHub %}
 					<span class="bg-rose-100 text-rose-800 text-sm font-medium me-2 px-2.5 py-1.5 rounded dark:bg-rose-900 dark:text-rose-300">Requires Hub/Bridge</span>
 				{% endif %}
-				{% if not (camera.fields.localStorage == "None" %}
+				{% if not (camera.fields.localStorage == "None") %}
 					<span class="bg-pink-100 text-pink-800 text-sm font-medium me-2 px-2.5 py-1.5 rounded dark:bg-pink-900 dark:text-pink-300">{{ camera.fields.localStorage }}</span>
 				{% endif %}
 				{% for powerSource in camera.fields.powerSources %}
