@@ -20,7 +20,7 @@ title: HomeKit.cam - Every HomeKit camera and more
 	{% for camera in cameras %}
 	  <li class="relative flex justify-between gap-x-6 px-4 py-5 hover:bg-gray-50 sm:px-6">
 		<div class="flex min-w-0 gap-x-4">
-		  <img class="h-32 w-32 flex-none rounded-full bg-gray-50" src="{{ camera.fields.image.fields.file.url }}?w=128&fit=pad" />
+		  <img class="h-32 w-32 flex-none rounded-full bg-gray-50" src="{{ camera.fields.image.fields.file.url }}?w=128&h=128&fit=pad" />
 		  <div class="min-w-0 flex-auto">
 			<p class="font-semibold leading-6 text-gray-900">
 			  <a href="{{ camera.fields.productUrl }}">
