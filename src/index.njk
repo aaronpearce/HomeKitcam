@@ -4,12 +4,12 @@ title: HomeKit.cam - Every HomeKit camera and more
 ---
 <main class="mx-auto max-w-4xl">
 	<nav>
-  	  <div class="mx-auto">
+  	  <div class="mx-auto px-8 sm:px-0">
 		  <div class="flex h-16 justify-between">
 			<div class="flex flex-shrink-0 items-center">
-	  			<h1 class="text-3xl font-bold">HomeKit.cam</h1>
+	  			<h1 class="text-2xl sm:text-3xl font-bold">HomeKit.cam</h1>
 			</div>
-  		  	<div class="hidden sm:ml-6 sm:flex sm:items-center">
+  		  	<div class="sm:ml-6 flex items-center">
 				<a href="https://homecam.app" class="ml-6 inline-flex items-center rounded-md bg-amber-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-amber-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-500">Sponsored by HomeCam</a>
 	  	  	</div>
 		  </div>
@@ -20,7 +20,7 @@ title: HomeKit.cam - Every HomeKit camera and more
 	{% for camera in cameras %}
 	  <li class="relative flex justify-between gap-x-6 px-4 py-5 hover:bg-gray-50 sm:px-6">
 		<div class="flex min-w-0 gap-x-4">
-		  <img class="h-32 w-32 flex-none rounded-full bg-gray-50" src="{{ camera.fields.image.fields.file.url }}?w=128&h=128&fit=pad" />
+		  <img class="h-16 w-16 sm:h-32 sm:w-32 flex-none rounded-full bg-gray-50" src="{{ camera.fields.image.fields.file.url }}?w=128&h=128&fit=pad" />
 		  <div class="min-w-0 flex-auto">
 			<p class="font-semibold leading-6 text-gray-900">
 			  <a href="{{ camera.fields.productUrl }}">
@@ -32,21 +32,21 @@ title: HomeKit.cam - Every HomeKit camera and more
 			  {{ camera.fields.productDescription | renderRichTextAsHtml | safe }}
 			</p>
 			<div class="py-4">
-				<span class="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-1.5 rounded dark:bg-blue-900 dark:text-blue-300">{{ camera.fields.resolution }}</span>
+				<span class="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-1.5 rounded dark:bg-blue-900 dark:text-blue-300 text-nowrap">{{ camera.fields.resolution }}</span>
 				{% if camera.fields.hasHKSV %}
-					<span class="bg-yellow-100 text-yellow-800 text-sm font-medium me-2 px-2.5 py-1.5 rounded dark:bg-yellow-900 dark:text-yellow-300">HKSV</span>
+					<span class="bg-yellow-100 text-yellow-800 text-sm font-medium me-2 px-2.5 py-1.5 rounded dark:bg-yellow-900 dark:text-yellow-300 text-nowrap">HKSV</span>
 				{% endif %}
 				{% if camera.fields.hasNightMode %}
-					<span class="bg-zinc-100 text-zinc-800 text-sm font-medium me-2 px-2.5 py-1.5 rounded dark:bg-zinc-900 dark:text-zinc-300">Night Vision</span>
+					<span class="bg-zinc-100 text-zinc-800 text-sm font-medium me-2 px-2.5 py-1.5 rounded dark:bg-zinc-900 dark:text-zinc-300 text-nowrap">Night Vision</span>
 				{% endif %}
 				{% if camera.fields.requiresHub %}
-					<span class="bg-rose-100 text-rose-800 text-sm font-medium me-2 px-2.5 py-1.5 rounded dark:bg-rose-900 dark:text-rose-300">Requires Hub/Bridge</span>
+					<span class="bg-rose-100 text-rose-800 text-sm font-medium me-2 px-2.5 py-1.5 rounded dark:bg-rose-900 dark:text-rose-300 text-nowrap">Requires Hub/Bridge</span>
 				{% endif %}
 				{% if not (camera.fields.localStorage == "None") %}
-					<span class="bg-pink-100 text-pink-800 text-sm font-medium me-2 px-2.5 py-1.5 rounded dark:bg-pink-900 dark:text-pink-300">{{ camera.fields.localStorage }}</span>
+					<span class="bg-pink-100 text-pink-800 text-sm font-medium me-2 px-2.5 py-1.5 rounded dark:bg-pink-900 dark:text-pink-300 text-nowrap">{{ camera.fields.localStorage }}</span>
 				{% endif %}
 				{% for powerSource in camera.fields.powerSources %}
-					<span class="bg-indigo-100 text-indigo-800 text-sm font-medium me-2 px-2.5 py-1.5 rounded dark:bg-indigo-900 dark:text-indigo-300">{{ powerSource }}</span>
+					<span class="bg-indigo-100 text-indigo-800 text-sm font-medium me-2 px-2.5 py-1.5 rounded dark:bg-indigo-900 dark:text-indigo-300 text-nowrap">{{ powerSource }}</span>
 				{% endfor %}
 			</div>
 		  </div>
