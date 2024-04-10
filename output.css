@@ -725,24 +725,16 @@ select {
   display: inline-flex;
 }
 
-.hidden {
-  display: none;
-}
-
 .h-16 {
   height: 4rem;
-}
-
-.h-32 {
-  height: 8rem;
 }
 
 .h-5 {
   height: 1.25rem;
 }
 
-.w-32 {
-  width: 8rem;
+.w-16 {
+  width: 4rem;
 }
 
 .w-5 {
@@ -863,6 +855,11 @@ select {
   background-color: rgb(224 231 255 / var(--tw-bg-opacity));
 }
 
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -908,9 +905,9 @@ select {
   padding-bottom: 0.25rem;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-sm {
@@ -1102,20 +1099,30 @@ select {
     margin-left: 1.5rem;
   }
 
-  .sm\:flex {
-    display: flex;
+  .sm\:h-32 {
+    height: 8rem;
   }
 
-  .sm\:items-center {
-    align-items: center;
+  .sm\:w-32 {
+    width: 8rem;
   }
 
   .sm\:rounded-xl {
     border-radius: 0.75rem;
   }
 
+  .sm\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
   .sm\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+
+  .sm\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 }
