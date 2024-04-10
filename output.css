@@ -709,6 +709,10 @@ select {
   margin-left: 1.5rem;
 }
 
+.mb-16 {
+  margin-bottom: 4rem;
+}
+
 .mt-1 {
   margin-top: 0.25rem;
 }
@@ -902,10 +906,6 @@ select {
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
-}
-
-.pb-16 {
-  padding-bottom: 4rem;
 }
 
 .text-3xl {
