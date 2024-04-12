@@ -23,7 +23,7 @@ title: HomeKit.cam - Every HomeKit camera and more
 		  <img class="h-16 w-16 sm:h-32 sm:w-32 flex-none rounded-full bg-gray-50" src="{{ camera.fields.image.fields.file.url }}?w=128&h=128&fit=pad" />
 		  <div class="min-w-0 flex-auto">
 			<p class="font-semibold leading-6 text-gray-900">
-			  <a href="{{ camera.fields.amazonUrl if camera.fields.amazonUrl else camera.fields.productUrl }}">
+			  <a href="{{ camera.fields.affiliateUrl if camera.fields.affiliateUrl else camera.fields.productUrl }}">
 				<span class="absolute inset-x-0 -top-px bottom-0"></span>
 				{{ camera.fields.brand }} {{ camera.fields.name }}
 			  </a>
