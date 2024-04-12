@@ -709,12 +709,20 @@ select {
   margin-left: 1.5rem;
 }
 
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
 .mb-16 {
   margin-bottom: 4rem;
 }
 
-.mt-1 {
-  margin-top: 0.25rem;
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
 }
 
 .flex {
@@ -747,6 +755,10 @@ select {
 
 .max-w-4xl {
   max-width: 56rem;
+}
+
+.max-w-3xl {
+  max-width: 48rem;
 }
 
 .flex-none {
@@ -903,6 +915,10 @@ select {
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .text-2xl {
